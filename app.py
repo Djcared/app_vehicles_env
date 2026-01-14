@@ -17,7 +17,7 @@ if build_histogram:
     st.write('Histograma del odómetro')
     fig = go.Figure(data=[go.Histogram(x=car_data['odometer'])])
     fig.update_layout(title_text='Distribución del Odómetro')
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 if build_scatter:
     st.write('Gráfico de dispersión: Precio vs Odómetro')
@@ -27,4 +27,4 @@ if build_scatter:
         y='price',
         title='Precio vs Odómetro'
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
